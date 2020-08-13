@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     private Transform cam;
     private World world;
 
-    public float walkSpeed = 3f;
+    public float walkSpeed = 0.1f;
     public float sprintSpeed = 6f;
     public float jumpForce = 5f;
     public float gravity = -9.8f;
@@ -32,33 +32,46 @@ public class Player : MonoBehaviour {
     public float checkIncrement = 0.1f;
     public float reach = 8f;
 
-    public byte selectedBlockIndex = 1;
+    public Toolbar toolbar;
 
     private void Start() {
 
         cam = GameObject.Find("Main Camera").transform;
         world = GameObject.Find("World").GetComponent<World>();
 
-        Cursor.lockState = CursorLockMode.Locked;
+        world.inUI = false;
 
     }
 
     private void FixedUpdate() {
         
-        CalculateVelocity();
-        if (jumpRequest)
-            Jump();
+        if (!world.inUI) {
 
-        transform.Rotate(Vector3.up * mouseHorizontal);
-        cam.Rotate(Vector3.right * -mouseVertical);
-        transform.Translate(velocity, Space.World);
+            CalculateVelocity();
+            if (jumpRequest)
+                Jump();
+
+            transform.Rotate(Vector3.up * mouseHorizontal * world.settings.mouseSensitivity);
+            cam.Rotate(Vector3.right * -mouseVertical * world.settings.mouseSensitivity);
+            transform.Translate(velocity, Space.World);
+
+        }
 
     }
 
     private void Update() {
 
-        GetPlayerInputs();
-        placeCursorBlocks();
+        if (Input.GetKeyDown(KeyCode.I)) {
+
+            world.inUI = !world.inUI;
+
+        }
+
+        if (!world.inUI) {
+            GetPlayerInputs();
+            placeCursorBlocks();
+        }
+
     }
 
     void Jump () {
@@ -76,9 +89,9 @@ public class Player : MonoBehaviour {
             verticalMomentum += Time.fixedDeltaTime * gravity;
 
         // if we're sprinting, use the sprint multiplier.
-        if (isSprinting)
-            velocity = ((transform.forward * vertical) + (transform.right * horizontal)) * Time.fixedDeltaTime * sprintSpeed;
-        else
+        // if (isSprinting)
+        //     velocity = ((transform.forward * vertical) + (transform.right * horizontal)) * Time.fixedDeltaTime * sprintSpeed;
+        // else
             velocity = ((transform.forward * vertical) + (transform.right * horizontal)) * Time.fixedDeltaTime * walkSpeed;
 
         // Apply vertical momentum (falling/jumping).
@@ -98,6 +111,9 @@ public class Player : MonoBehaviour {
     }
 
     private void GetPlayerInputs () {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
@@ -119,17 +135,14 @@ public class Player : MonoBehaviour {
                 world.GetChunkFromVector3(highlightBlock.position).EditVoxel(highlightBlock.position, 0);
 
             // Place block.
-            if (Input.GetMouseButtonDown(1))
-                world.GetChunkFromVector3(placeBlock.position).EditVoxel(placeBlock.position, selectedBlockIndex);
-
+            if (Input.GetMouseButtonDown(1)) {
+                if (toolbar.slots[toolbar.slotIndex].HasItem) {
+                    world.GetChunkFromVector3(placeBlock.position).EditVoxel(placeBlock.position, toolbar.slots[toolbar.slotIndex].itemSlot.stack.id);
+                    toolbar.slots[toolbar.slotIndex].itemSlot.Take(1);
+                }
+            }
         }
 
-    }
-    public void JumpPlayer()
-    {
-        if(isGrounded){
-        jumpRequest = true;
-        }
     }
 
     private void placeCursorBlocks () {

@@ -8,13 +8,24 @@ public static class VoxelData {
 	public static readonly int ChunkHeight = 128;
     public static readonly int WorldSizeInChunks = 100;
 
+    // Lighting Values
+    public static float minLightLevel = 0.1f;
+    public static float maxLightLevel = 0.9f;
+    public static float lightFalloff = 0.08f;
+
+    public static int seed;
+
+    public static int WorldCentre {
+
+        get { return (WorldSizeInChunks * ChunkWidth) / 2; }
+
+    }
+
     public static int WorldSizeInVoxels {
 
         get { return WorldSizeInChunks * ChunkWidth; }
 
     }
-
-    public static readonly int ViewDistanceInChunks = 5;
 
     public static readonly int TextureAtlasSizeInBlocks = 16;
     public static float NormalizedBlockTextureSize {
@@ -36,14 +47,14 @@ public static class VoxelData {
 
 	};
 
-	public static readonly Vector3[] faceChecks = new Vector3[6] {
+	public static readonly Vector3Int[] faceChecks = new Vector3Int[6] {
 
-		new Vector3(0.0f, 0.0f, -1.0f),
-		new Vector3(0.0f, 0.0f, 1.0f),
-		new Vector3(0.0f, 1.0f, 0.0f),
-		new Vector3(0.0f, -1.0f, 0.0f),
-		new Vector3(-1.0f, 0.0f, 0.0f),
-		new Vector3(1.0f, 0.0f, 0.0f)
+		new Vector3Int(0, 0, -1),
+		new Vector3Int(0, 0, 1),
+		new Vector3Int(0, 1, 0),
+		new Vector3Int(0, -1, 0),
+		new Vector3Int(-1, 0, 0),
+		new Vector3Int(1, 0, 0)
 
 	};
 
