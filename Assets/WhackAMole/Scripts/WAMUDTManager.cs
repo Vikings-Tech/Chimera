@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
@@ -13,6 +14,12 @@ public class WAMUDTManager : MonoBehaviour, IUserDefinedTargetEventHandler
     private ImageTargetBuilder.FrameQuality udt_FrameQuality;
     public ImageTargetBehaviour _targetBehaviour;
     private int targetCounter;
+
+    private void Awake()
+    {
+        Time.timeScale = 0f;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +59,7 @@ public class WAMUDTManager : MonoBehaviour, IUserDefinedTargetEventHandler
         if (udt_FrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH)
         {
             udt_targetBuildingBehaviour.BuildNewTarget(targetCounter.ToString(),_targetBehaviour.GetSize().x);
+            Time.timeScale = 1f;
         }
     }
 }

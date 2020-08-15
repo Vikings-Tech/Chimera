@@ -5,7 +5,8 @@ public class WAMMoleControlScript : MonoBehaviour
     public float posReq;
     public float speed = 10;
     private bool close = false;
-
+    public float openPos;
+    public float closePos;
     void Awake()
     {
         posReq = -0.1f;
@@ -14,15 +15,15 @@ public class WAMMoleControlScript : MonoBehaviour
     {
         if (gameObject.name == WAMGameController.MoleGen.ToString() && !close)
         {
-            posReq = 1.2f;
-            if (transform.position.y > 1.18)
+            posReq = openPos;
+            if (transform.position.y > openPos-0.02)
             {
                 Invoke("CloseFunc", WAMGameController.timeSpeed);
             }
         }
         if(close)
         {
-            posReq = -0.1f;
+            posReq = closePos;
             if (transform.position.y < 0)
             {
                 close = false;

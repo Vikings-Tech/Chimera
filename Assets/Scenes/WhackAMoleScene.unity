@@ -375,6 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &93456140
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20515,6 +20517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &695555093
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25814,6 +25818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1101025800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26294,6 +26300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1327976774
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26853,6 +26861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1554472398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32015,6 +32025,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1754025525
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -46995,6 +47007,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1874009210
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -47639,6 +47653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &1965781308
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -47761,6 +47777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posReq: 0
   speed: 10
+  openPos: 1.2
+  closePos: -0.1
 --- !u!136 &2077431931
 CapsuleCollider:
   m_ObjectHideFlags: 0
