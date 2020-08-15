@@ -26,6 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WAMARScene.unity
     guid: c8539b74c57eed24c9f46b5b76ef7137
+  - {enabled: 1, path: Assets/Scenes/LoginScenes.unity, guid: 5afe4dd96048bc84ca4f4f649a755991}
   - enabled: 0
     path: Assets/BowlingAR/Prefabs/bowlingAR.unity
     guid: c62515a6d81187d47bdbea7a20a7ca97
