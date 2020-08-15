@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class playerInput : MonoBehaviour
 {
 
@@ -119,12 +119,14 @@ public class playerInput : MonoBehaviour
     {
         if (round < 4)
         {
-            LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 3.308743f, 1f);
+            LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 2.8f, 1f);
             boards[round].text = scores[round].ToString();
             scoreF = 0;
             round++;
 
             rb.velocity = Vector3.zero ;
+            rb.angularVelocity = Vector3.zero;
+            
         }
         else {
             Debug.Log("game over");
@@ -139,12 +141,12 @@ public class playerInput : MonoBehaviour
             ob.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             ob.transform.localEulerAngles = new Vector3(0, 0, 0);
             ob.transform.localPosition = new Vector3(0,0,0);
-            rb.gameObject.transform.localPosition = new Vector3(0.95f, -2.78f, 3.84f);
-            rb.velocity = Vector3.zero;
+            
             
             kk = false;
         }
-
+        rb.gameObject.transform.localPosition = new Vector3(0.95f, -2.78f, 3.84f);
+       // rb.velocity = Vector3.zero;
         foreach (GameObject ob in obs)
         {
             ob.GetComponent<Rigidbody>().useGravity = true;
@@ -152,6 +154,13 @@ public class playerInput : MonoBehaviour
         }
     }
 
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        panel.SetActive(false);
+    }
 
     public GameObject groundPlane;
 
