@@ -92,7 +92,7 @@ public class playerInput : MonoBehaviour
         Debug.Log("coroutine chala");
         foreach (GameObject ob in obs)
         {
-            if (ob.transform.eulerAngles.x > 70 || ob.transform.eulerAngles.y > 70 || ob.transform.eulerAngles.z > 70)
+            if (ob.transform.localEulerAngles.x > 70 || ob.transform.localEulerAngles.y > 70 || ob.transform.localEulerAngles.z > 70)
             {
                 Debug.Log("score badha");
                 scoreF++;
@@ -123,6 +123,8 @@ public class playerInput : MonoBehaviour
             boards[round].text = scores[round].ToString();
             scoreF = 0;
             round++;
+
+            rb.velocity = Vector3.zero ;
         }
         else {
             Debug.Log("game over");
