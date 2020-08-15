@@ -77,7 +77,7 @@ public class playerInput : MonoBehaviour
 
         Vector3 ballMotion = new Vector3(-distance.x, plane.transform.position.y, -distance.y);
 
-        rb.AddForce(ballMotion * 4);
+        rb.AddForce(ballMotion * 6);
 
         kk = true;
 
@@ -119,7 +119,7 @@ public class playerInput : MonoBehaviour
     {
         if (round < 4)
         {
-            LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 2.8f, 1f);
+            LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 2.2f, 1f);
             boards[round].text = scores[round].ToString();
             scoreF = 0;
             round++;

@@ -4,33 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MainGameScene.unity
-    guid: 2e0367066f37b435f97266edbdbcaa7f
-  - enabled: 0
-    path: Assets/Scenes/WhackAMoleScene.unity
-    guid: ca7048a764e563442b14357fabe4eba9
-  - enabled: 0
-    path: Assets/BowlingAR/Prefabs/bowling.unity
-    guid: 3df079731c3442143bb21bba32a11564
-  - enabled: 0
-    path: Assets/Scenes/WhackAMoleScene.unity
-    guid: ca7048a764e563442b14357fabe4eba9
-  - enabled: 0
-    path: Assets/BowlingAR/Prefabs/bowling.unity
-    guid: 3df079731c3442143bb21bba32a11564
-  - enabled: 0
-    path: Assets/BowlingAR/Prefabs/bowlingAR.unity
-    guid: c62515a6d81187d47bdbea7a20a7ca97
-  - enabled: 1
-    path: Assets/Scenes/WAMARScene.unity
-    guid: c8539b74c57eed24c9f46b5b76ef7137
-  - {enabled: 1, path: Assets/Scenes/LoginScenes.unity, guid: 5afe4dd96048bc84ca4f4f649a755991}
-  - enabled: 0
-    path: Assets/BowlingAR/Prefabs/bowlingAR.unity
-    guid: c62515a6d81187d47bdbea7a20a7ca97
-  - enabled: 1
-    path: Assets/MainGame/Assets/Scenes/World.unity
-    guid: 9ba13dfb4518e424bb325ed22099513d
+  m_Scenes: [{enabled: 0, path: Assets/Scenes/MainGameScene.unity, guid: 2e0367066f37b435f97266edbdbcaa7f},
+    {enabled: 0, path: Assets/Scenes/WhackAMoleScene.unity, guid: ca7048a764e563442b14357fabe4eba9},
+    {enabled: 0, path: Assets/BowlingAR/Prefabs/bowling.unity, guid: 3df079731c3442143bb21bba32a11564},
+    {enabled: 0, path: Assets/Scenes/WhackAMoleScene.unity, guid: ca7048a764e563442b14357fabe4eba9},
+    {enabled: 1, path: Assets/BowlingAR/Prefabs/bowling.unity, guid: 3df079731c3442143bb21bba32a11564},
+    {enabled: 0, path: Assets/BowlingAR/Prefabs/bowlingAR.unity, guid: c62515a6d81187d47bdbea7a20a7ca97},
+    {enabled: 0, path: Assets/BowlingAR/Prefabs/bowlingAR.unity, guid: c62515a6d81187d47bdbea7a20a7ca97},
+    {enabled: 1, path: Assets/Scenes/WAMARScene.unity, guid: c8539b74c57eed24c9f46b5b76ef7137},
+    {enabled: 1, path: Assets/Scenes/LoginScenes.unity, guid: 5afe4dd96048bc84ca4f4f649a755991},
+    {enabled: 0, path: Assets/BowlingAR/Prefabs/bowlingAR.unity, guid: c62515a6d81187d47bdbea7a20a7ca97},
+    {enabled: 1, path: Assets/MainGame/Assets/Scenes/World.unity, guid: 9ba13dfb4518e424bb325ed22099513d}]
   m_configObjects: {}
