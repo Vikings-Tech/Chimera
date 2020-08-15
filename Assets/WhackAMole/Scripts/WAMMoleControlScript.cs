@@ -32,38 +32,8 @@ public class WAMMoleControlScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x,
             Mathf.Lerp(transform.position.y, posReq, Time.deltaTime * speed),
             transform.position.z);
-        
 
-        
-        
-        // if (gameObject.name == WAMGameController.MoleGen.ToString() && !close)
-        // {
-        //     posReq = 1.2f;
-        //     transform.position = new Vector3(transform.position.x,
-        //         Mathf.Lerp(transform.position.y, posReq, Time.deltaTime * speed),
-        //         transform.position.z);
-        //     if (transform.position.y >= 1.18)
-        //     {
-        //         Invoke("CloseFunc", WAMGameController.timeSpeed);
-        //     }
-        // }
-        //
-        // if (close)
-        // {
-        //     posReq = -0.1f;
-        //     transform.position = new Vector3(transform.position.x,
-        //         Mathf.Lerp(transform.position.y, posReq, Time.deltaTime * speed),
-        //         transform.position.z);
-        //     if (transform.position.y <= 0)
-        //     {
-        //         close = false;
-        //         WAMGameController.MoleGen = -1;
-        //     }
-        // }
 
-        
-
-        
     }
 
     public void CloseFunc()

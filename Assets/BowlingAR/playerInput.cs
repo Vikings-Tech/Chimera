@@ -75,9 +75,9 @@ public class playerInput : MonoBehaviour
         Vector2 distance = endPos - startPos;
 
 
-        Vector3 ballMotion = new Vector3(-distance.y, plane.transform.position.y, distance.x);
+        Vector3 ballMotion = new Vector3(-distance.x, plane.transform.position.y, -distance.y);
 
-        rb.AddForce(ballMotion * 5);
+        rb.AddForce(ballMotion * 4);
 
         kk = true;
 
@@ -103,6 +103,14 @@ public class playerInput : MonoBehaviour
         score.text = scoreF.ToString();
         scores[round] = scoreF;
         resetScene();
+    }
+
+
+    public GameObject panel;
+
+    public void closePanel()
+    {
+        panel.SetActive(false);
     }
 
 
@@ -140,5 +148,13 @@ public class playerInput : MonoBehaviour
             ob.GetComponent<Rigidbody>().useGravity = true;
           
         }
+    }
+
+
+    public GameObject groundPlane;
+
+    public void planeDestroyer()
+    {
+        groundPlane.SetActive(false);
     }
 }

@@ -34,10 +34,13 @@ public class Player : MonoBehaviour {
 
     public Toolbar toolbar;
 
+    protected Joystick joystick;
+
     private void Start() {
 
         cam = GameObject.Find("Main Camera").transform;
         world = GameObject.Find("World").GetComponent<World>();
+        joystick = GameObject.FindObjectOfType<Joystick>();
 
         world.inUI = false;
 
@@ -115,8 +118,8 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        horizontal = joystick.Horizontal;
+        vertical = joystick.Vertical;
         mouseHorizontal = Input.GetAxis("Mouse X");
         mouseVertical = Input.GetAxis("Mouse Y");
 

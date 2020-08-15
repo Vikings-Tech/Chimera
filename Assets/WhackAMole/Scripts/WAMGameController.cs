@@ -8,29 +8,48 @@ public class WAMGameController : MonoBehaviour
 {
     public static int MoleGen;
     public static float timeSpeed;
-    public Text clockTimer;
+    public GameObject gameOverAnim;
+    public Image clockImage;
+    private float time;
+    private WAMMoleControlScript[] _moleControlScripts;
+    private WAMBaseOpeningScript[] _baseOpeningScripts;
     
     void Start()
     {
+        _moleControlScripts = FindObjectsOfType<WAMMoleControlScript>();
+        _baseOpeningScripts = FindObjectsOfType<WAMBaseOpeningScript>();
         timeSpeed = 2;
         StartCoroutine(GeneratorController());
     }
 
     IEnumerator Clock()
     {
-        float time = 120;
-        while (time > 0)
+        
+        while (time < 120)
         {
-            time -= 1;
-            yield return new WaitForSeconds(1);
-            clockTimer.text = time.ToString();
+            clockImage.fillAmount = 1- time / 120;
+            if (time < 40)
+            {
+                clockImage.color = Color.green;
+            }
+            else if (time < 80)
+            {
+                clockImage.color = Color.yellow;
+            }
+            else
+            {
+                clockImage.color = Color.red;
+            }
+            yield return null;
+            Debug.Log(time);
         }
         
     }
     IEnumerator GeneratorController()
     {
+        
+        time = 0;
         StartCoroutine(Clock());
-        float time = 0;
         int preMol = 0;
         while (time < 120)
         {   
@@ -64,12 +83,23 @@ public class WAMGameController : MonoBehaviour
             preMol = MoleGen;
         }
 
+        time = 120;
         MoleGen = 0;
+        foreach (var VARIABLE in _moleControlScripts)
+        {
+            VARIABLE.CloseFunc();
+        }
+
+        foreach (var VARIABLE in _baseOpeningScripts)
+        {
+            VARIABLE.CloseFunc();
+        }
+        yield return new WaitForSeconds(0.5f);
+        gameOverAnim.SetActive(true);
     }
 
     private void OnDestroy()
     {
-        Debug.Log("Destroy GC");
         StopAllCoroutines();
     }
 }
