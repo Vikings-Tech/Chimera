@@ -44,6 +44,7 @@ public class World : MonoBehaviour
     public Clouds clouds;
 
     public GameObject debugScreen;
+    public GameObject newObject;
 
     public GameObject creativeInventoryWindow;
     public GameObject cursorSlot;
@@ -121,6 +122,7 @@ public class World : MonoBehaviour
     {
 
         playerChunkCoord = GetChunkCoordFromVector3(player.position);
+        
 
         // Only update the chunks if the player has moved from the chunk they were previously on.
         if (!playerChunkCoord.Equals(playerLastChunkCoord))
@@ -482,6 +484,22 @@ public class World : MonoBehaviour
 
                     modifications.Enqueue(Structure.GenerateMajorFlora(biome.majorFloraIndex, pos, biome.minHeight, biome.maxHeight));
                 }
+            }
+
+        }
+
+        /* PORTAL PASS */
+        if (yPos == terrainHeight)
+        {
+
+            if (Noise.Get2DPerlin(new Vector2(pos.x, pos.z), 0.5f, biome.majorFloraZoneScale) > 0.7f)
+            {
+
+                // if (Noise.Get2DPerlin(new Vector2(pos.x, pos.z), 0, biome.majorFloraPlacementScale) > biome.majorFloraPlacementThreshold)
+                // {
+                voxelValue = 1;
+                // modifications.Enqueue(Structure.GenerateMajorFlora(biome.majorFloraIndex, pos, biome.minHeight, biome.maxHeight));
+                // }
             }
 
         }

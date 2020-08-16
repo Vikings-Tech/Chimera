@@ -92,13 +92,22 @@ public class playerInput : MonoBehaviour
         Debug.Log("coroutine chala");
         foreach (GameObject ob in obs)
         {
-            if (ob.transform.localEulerAngles.x > 70 || ob.transform.localEulerAngles.y > 70 || ob.transform.localEulerAngles.z > 70)
-            {
-                Debug.Log("score badha");
-                scoreF++;
 
-             
-            }
+            /*     if(ob.transform.rotation.eulerAngles.x >20 || ob.transform.rotation.eulerAngles.y > 20 || ob.transform.rotation.eulerAngles.z > 20)
+             {
+
+
+                 Debug.Log("score badha");
+                 scoreF++;
+
+             } */
+             if (ob.transform.localEulerAngles.x > 70 || ob.transform.localEulerAngles.y > 70 || ob.transform.localEulerAngles.z > 70)
+             {
+                 Debug.Log("score badha");
+                 scoreF++;
+
+
+             } 
         }
         score.text = scoreF.ToString();
         scores[round] = scoreF;
@@ -129,6 +138,9 @@ public class playerInput : MonoBehaviour
             
         }
         else {
+            LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 2.2f, 1f);
+
+            rb.gameObject.SetActive(false);
             Debug.Log("game over");
             gameOver.SetActive(true);
         

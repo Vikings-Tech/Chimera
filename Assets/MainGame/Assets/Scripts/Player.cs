@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Transform cam;
     private World world;
 
-    public float walkSpeed = 0.1f;
+    public float walkSpeed = 0.5f;
     public float sprintSpeed = 6f;
     public float jumpForce = 5f;
     public float gravity = -9.8f;
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         cam = GameObject.Find("Main Camera").transform;
         world = GameObject.Find("World").GetComponent<World>();
         joystick = GameObject.FindObjectOfType<Joystick>();
@@ -130,12 +130,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        horizontal = joystick.Horizontal;
-        vertical = joystick.Vertical;
-        // mouseHorizontal = Input.GetAxis("Mouse X");
-        // mouseVertical = Input.GetAxis("Mouse Y");
-        mouseVertical = fixedTouchField.TouchDist.y;
-        mouseHorizontal = fixedTouchField.TouchDist.x;
+        horizontal = Input.GetAxis("Horizontal");
+        // horizontal = joystick.Horizontal;
+        vertical = Input.GetAxis("Vertical");
+        // vertical = joystick.Vertical;
+        mouseHorizontal = Input.GetAxis("Mouse X");
+        mouseVertical = Input.GetAxis("Mouse Y");
+        // mouseVertical = fixedTouchField.TouchDist.y*0.1f;
+        // mouseHorizontal = fixedTouchField.TouchDist.x*0.1f;
 
 
         // if (Input.GetButtonDown("Sprint"))
