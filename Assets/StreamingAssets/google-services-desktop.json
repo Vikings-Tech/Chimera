@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "97062561413",
+    "firebase_url": "https://chimerachat-e4a7e.firebaseio.com",
+    "project_id": "chimerachat-e4a7e",
+    "storage_bucket": "chimerachat-e4a7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97062561413:android:7c76909949eeae08cf2bec",
+        "android_client_info": {
+          "package_name": "com.Vikings.Chimera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97062561413-t8ohks10vkbp7mp2n1vk7k599li8s7j6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Vikings.Chimera",
+            "certificate_hash": "51529114e44186a5e4072a279d88b59819f36526"
+          }
+        },
+        {
+          "client_id": "97062561413-13fqvgjioiakq67e29sdnj2kl9cenacq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi91UMhru-52Ow4T4Ss9u6mdUYLhBuLrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97062561413-13fqvgjioiakq67e29sdnj2kl9cenacq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

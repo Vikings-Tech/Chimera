@@ -13,31 +13,32 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: AQFb98b/////AAABmRzCTjAmSkqWroLtK4z0b/JSFrX4dHTz4QtYYiE9c+qkmu4ODkY+PMKmpde4IAN3bXxXGMtwdE2XsuIr/5XLgfwC4PBABZnQUwo8KhQ5offDj0JCc1Qk/3SPXX71wb9yHfkLOTosRa3jJ8KJmRME1X7tYXnfr5Oh/6eWZ9QKLmF2ySxIh1UJ9QVT3jWny/0HwSmXDAO8w06JnmP4cCqHqq2kAoo3+MM3oLk4RjpyJPcCcLD38WCv6yKA70DOrVQXvJ3wIEmAr+V4qOoqFkp+lWbPvepop+anl9tsAeVub07sBqjm/ENCRHJ/JvVla6d1lC4LUk8hv4hQuwIpt96gX70GmN6JfTAgGPlKVIoeQ2bp
     ufoLicenseKey: QVJVQmU4RC8vLy8vQUFBQUtQaVEzYjVjcGs1ZnFpN2tsMFQ2MGVFc1Qzdk9mcktBQUVhdGZ2UG1STWo0ZTlqWmdFdFJnUEUvTzRTTkpCSWlFMzFZd2c1UitlSHUwdkFFYnhJM0RTSG9Db2lEeXgrM1JMcENrM1NlajdmaW45eGRHUTNDMUpQUmxHUlVIRjQyeEgzQU9GYmJSc2Q1Q0VzcitSUHhLSkRaeTZ6Kzl4WWV6dExZblQ0WjExQ21QQVBxZTVTOERENkM4c21PRENYQ2dabVZRN0RqY1ZoRFhYN2RsODRuQ0RuREZEWXoyR3VtMGppcVFtQmdMSXM0ZmMxdXBuaDBOZ2t2dWZLYVg3K2JGbklwUFNjYmVFeG5YK21WbWpSdGdXbWMyU2NmcDdBQk5lU1JaMUVLRDZXWVVTeFcxNFAzQlRzS1pxR1pRdnUvck5CTU1vY1hjUnZBWXZSVXNBN0dqWCtCa0ZTdEdvTHlNOWZJSmQ5V1RXdVA=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
-    virtualSceneScaleFactor: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
-    version: 9.3.3
+    version: 8.5.9
     eulaAcceptedVersions: '{"Values":["7.5","8.0","8.1","8.5","8.3","9.0","8.6","9.1","0.0","9.3"]}'
-    modelTargetMode: 0
   database:
     disableModelExtraction: 0
   videoBackground:
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
       type: 3}
-    unlitShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
+    autoInitTracker: 0
     autoStartTracker: 0
     arcoreRequirement: 0
     autoImportArcore: 0
-  playmode:
-    playModeType: 0
+  smartTerrain:
+    autoInitTracker: 0
+    autoStartTracker: 0
   webcam:
+    deviceNameSetInEditor: 
+    turnOffWebCam: 0
     renderTextureLayer: 30

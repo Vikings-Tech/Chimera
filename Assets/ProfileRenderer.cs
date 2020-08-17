@@ -8,11 +8,13 @@ public class ProfileRenderer : MonoBehaviour
 
     public void SetProfilePic(Sprite _ProfilePic)
     {
+        if(ProfilePic != null)
         ProfilePic.sprite = _ProfilePic;
     }
 
     public void SetName(string _name)
     {
+        if(Name != null)
         Name.text = _name;
     }
 }

@@ -6,6 +6,7 @@ using Facebook.Unity;
 public class FacebookLoginFunctions : MonoBehaviour
 {
     public ProfileRenderer PR;
+    public CommonSceneChange SceneChanger;
 
     public void Awake()
     {
@@ -71,6 +72,7 @@ public class FacebookLoginFunctions : MonoBehaviour
         {
             FB.API("/me?fields=first_name", HttpMethod.GET, DisplayUsername);
             FB.API("/me/picture?type=square&height=128&width=128", HttpMethod.GET, DisplayProfilePic);
+            SceneChanger.ChangeSceneTo("MenuScene");
         }
         else
         {
@@ -82,7 +84,8 @@ public class FacebookLoginFunctions : MonoBehaviour
         if (result.Error == null)
         {
             string name = "" + result.ResultDictionary["first_name"];
-            PR.SetName(name);
+            GameManager.usrName = name;
+            PR?.SetName(name);
             Debug.Log("" + name);
         }
         else
@@ -96,12 +99,14 @@ public class FacebookLoginFunctions : MonoBehaviour
         if (result.Texture != null)
         {
             Debug.Log("Profile Pic");
-            PR.SetProfilePic(Sprite.Create(result.Texture, new Rect(0,0,128,128),new Vector2()));
+            GameManager.profilePic = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2());
+            PR?.SetProfilePic(Sprite.Create (result.Texture, new Rect(0,0,128,128),new Vector2()));
         }
         else
         {
             Debug.Log(result.Error);
         }
+        
     }
 
 

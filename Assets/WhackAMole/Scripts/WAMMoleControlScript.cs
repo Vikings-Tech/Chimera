@@ -16,7 +16,7 @@ public class WAMMoleControlScript : MonoBehaviour
         if (gameObject.name == WAMGameController.MoleGen.ToString() && !close)
         {
             posReq = openPos;
-            if (transform.position.y > openPos-0.02)
+            if (transform.localPosition.y > openPos-0.02)
             {
                 Invoke("CloseFunc", WAMGameController.timeSpeed);
             }
@@ -24,15 +24,15 @@ public class WAMMoleControlScript : MonoBehaviour
         if(close)
         {
             posReq = closePos;
-            if (transform.position.y < 0)
+            if (transform.localPosition.y < 0)
             {
                 close = false;
                 WAMGameController.MoleGen = -1;
             }
         }
-        transform.position = new Vector3(transform.position.x,
-            Mathf.Lerp(transform.position.y, posReq, Time.deltaTime * speed),
-            transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x,
+            Mathf.Lerp(transform.localPosition.y, posReq, Time.deltaTime * speed),
+            transform.localPosition.z);
 
 
     }

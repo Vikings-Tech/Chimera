@@ -1,0 +1,36 @@
+﻿using UnityEngine.UI;
+using UnityEngine;
+using System;
+
+public class ChatHandler : MonoBehaviour
+{
+    public InputField messageInput;
+    public DatabaseAPI database;
+
+    public GameObject messagePrefab;
+    public Transform messagesContainer;
+
+    private void Start()
+    {
+        database.ListenForMessages(InstantiateMessage, Debug.Log );
+    }
+
+    public void SendMessage()
+    {
+        database.PostMessage(new Message(messageInput.text, (System.Empty(GameManager.usrName))), () => 
+        {
+            Debug.Log("Message Was sent");
+        },exception =>
+        {
+            Debug.Log(exception);
+        }
+        );
+    }
+
+    private void InstantiateMessage(Message message)
+    {
+        var msg = Instantiate(messagePrefab, transform.position, Quaternion.identity);
+        msg.transform.SetParent(messagesContainer, false);
+        msg.GetComponent<Text>().text = $"{message.sender}: {message.text}";  
+    }
+}

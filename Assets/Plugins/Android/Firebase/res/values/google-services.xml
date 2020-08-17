@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://chimerachat-e4a7e.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">97062561413</string>
+  <string name="google_storage_bucket" translatable="false">chimerachat-e4a7e.appspot.com</string>
+  <string name="project_id" translatable="false">chimerachat-e4a7e</string>
+  <string name="google_api_key" translatable="false">AIzaSyCi91UMhru-52Ow4T4Ss9u6mdUYLhBuLrY</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCi91UMhru-52Ow4T4Ss9u6mdUYLhBuLrY</string>
+  <string name="google_app_id" translatable="false">1:97062561413:android:7c76909949eeae08cf2bec</string>
+  <string name="default_android_client_id" translatable="false">97062561413-t8ohks10vkbp7mp2n1vk7k599li8s7j6.apps.googleusercontent.com</string>
+  <string name="default_web_client_id" translatable="false">97062561413-13fqvgjioiakq67e29sdnj2kl9cenacq.apps.googleusercontent.com</string>
+</resources>
