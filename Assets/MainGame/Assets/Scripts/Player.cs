@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        // Screen.orientation = ScreenOrientation.LandscapeLeft;
         cam = GameObject.Find("Main Camera").transform;
         world = GameObject.Find("World").GetComponent<World>();
         joystick = GameObject.FindObjectOfType<Joystick>();
