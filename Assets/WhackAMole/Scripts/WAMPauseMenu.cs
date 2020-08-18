@@ -8,9 +8,12 @@ public class WAMPauseMenu : MonoBehaviour
 
     public void GamePause()
     {
+
         Time.timeScale = 0f;
         isPaused = true;
     }
+
+
 
     public void GameUnpaused()
     {
