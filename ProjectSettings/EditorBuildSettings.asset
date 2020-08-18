@@ -71,4 +71,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WAMARScene.unity
     guid: c8539b74c57eed24c9f46b5b76ef7137
+  - enabled: 1
+    path: Assets/BowlingAR/Prefabs/bowlingAR.unity
+    guid: c62515a6d81187d47bdbea7a20a7ca97
+  - enabled: 1
+    path: Assets/BowlingAR/2player/bowlingMultiplayer.unity
+    guid: 9ae65807429274647be64a52dba950fd
   m_configObjects: {}

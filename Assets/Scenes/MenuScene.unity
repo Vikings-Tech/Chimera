@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee51b147006b7324f8a3f5f0aeaebd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 0.5
 --- !u!1 &32041112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,7 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee51b147006b7324f8a3f5f0aeaebd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 0.5
 --- !u!114 &1063710749
 MonoBehaviour:
   m_ObjectHideFlags: 0

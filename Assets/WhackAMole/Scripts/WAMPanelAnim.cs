@@ -39,12 +39,18 @@ public class WAMPanelAnim : MonoBehaviour
             yield return null;
         }
         transform.localScale = Vector3.one;
-        _pauseMenu.GamePause();
+        if (_pauseMenu != null)
+        {
+            _pauseMenu.GamePause();
+        }
     }
     
     public void ClosePan()
     {
-        _pauseMenu.GameUnpaused();
+        if (_pauseMenu != null)
+        {
+            _pauseMenu.GameUnpaused();
+        }
         StartCoroutine(ClosePanel());
     }
     
