@@ -13,6 +13,9 @@ public class WAMUDTManager : MonoBehaviour, IUserDefinedTargetEventHandler
 
     private ImageTargetBuilder.FrameQuality udt_FrameQuality;
     public ImageTargetBehaviour _targetBehaviour;
+
+    public GameObject[] qualityBars;
+    
     private int targetCounter;
 
     private void Awake()
@@ -43,6 +46,23 @@ public class WAMUDTManager : MonoBehaviour, IUserDefinedTargetEventHandler
     public void OnFrameQualityChanged(ImageTargetBuilder.FrameQuality frameQuality)
     {
         udt_FrameQuality = frameQuality;
+        foreach (var bar in qualityBars)
+        {
+            bar.SetActive(false);
+        }
+        
+        if (frameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_LOW)
+        {
+            qualityBars[0].SetActive(true);
+        }
+        else if (frameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_MEDIUM)
+        {
+            qualityBars[1].SetActive(true);
+        }
+        else if (frameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH)
+        {
+            qualityBars[2].SetActive(true);
+        }
     }
 
     public void OnNewTrackableSource(TrackableSource trackableSource)
