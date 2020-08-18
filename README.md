@@ -26,10 +26,10 @@ Our app also brings opportunities to Indian developers to host and monetize thei
 </ul>
 
 ## Screenshots
-- Unity Collab commit history(As of 5:30PM, 18th August)
-  <img src="CollabScreenshots/1.png"/>
-  <img src="CollabScreenshots/2.png"/>
-  <img src="CollabScreenshots/3.png"/>
-  <img src="CollabScreenshots/4.png"/>
-  <img src="CollabScreenshots/5.png"/>
-  <img src="CollabScreenshots/6.png"/>
+- Unity Collab commit history(As of 5:30PM, 18th August)<br>
+  <img src="CollabScreenshots/1.png" width="100"/>
+  <img src="CollabScreenshots/2.png" width="100"/>
+  <img src="CollabScreenshots/3.png" width="100"/>
+  <img src="CollabScreenshots/4.png" width="100"/>
+  <img src="CollabScreenshots/5.png" width="100"/>
+  <img src="CollabScreenshots/6.png" width="100"/>
