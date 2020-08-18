@@ -564,8 +564,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781349212}
-        m_MethodName: 
+      - m_Target: {fileID: 781349215}
+        m_MethodName: ChangeSceneTo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
