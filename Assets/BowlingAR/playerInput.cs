@@ -152,12 +152,12 @@ public class playerInput : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             
         }
-        else {
+        else if(round == 4) {
             LeanTween.scaleY(boards[round].gameObject.transform.parent.gameObject, 2.2f, 1f);
 
             rb.gameObject.SetActive(false);
             Debug.Log("game over");
-            gameOver.SetActive(true);
+            gameOverdone();
         
         }
         foreach (GameObject ob in obs)
@@ -194,5 +194,66 @@ public class playerInput : MonoBehaviour
     public void planeDestroyer()
     {
         groundPlane.SetActive(false);
+    }
+
+
+    public void menu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public Text finalScore;
+        public int finalScoreInt;
+    public Text highScore;
+    public int highScoreInt;
+
+    public GameObject star;
+    public GameObject star1;
+    public GameObject star2;
+
+    public void gameOverdone()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            finalScoreInt += scores[i];
+        }
+
+        finalScore.text = "Score: " + finalScoreInt.ToString();
+
+        if(finalScoreInt > 0)
+        {
+            star.SetActive(true);
+        }
+        if (finalScoreInt > 18)
+        {
+            star2.SetActive(true);
+        }
+        if (finalScoreInt > 30)
+        {
+            star2.SetActive(true);
+        }
+
+
+        if (ES3.KeyExists("highScore"))
+        {
+            highScoreInt = ES3.Load<int>("highScore");
+        }else if (!ES3.KeyExists("highScore"))
+        {
+            highScoreInt = finalScoreInt;
+
+            ES3.Save<int>("highScore", highScoreInt);
+        }
+
+
+        if(highScoreInt < finalScoreInt)
+        {
+            highScoreInt = finalScoreInt;
+
+            ES3.Save<int>("highScore", highScoreInt);
+        }
+
+        highScore.text = "High Score: " + highScoreInt.ToString();
+        LeanTween.scale(gameOver, Vector3.one, 1f);
+
     }
 }

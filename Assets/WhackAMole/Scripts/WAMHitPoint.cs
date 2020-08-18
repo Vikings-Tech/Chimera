@@ -9,7 +9,7 @@ public class WAMHitPoint : MonoBehaviour
     private WAMBaseOpeningScript[] _baseOpeningScripts;
     public Text score;
     private int points = 0;
-    
+    public Text finalScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +39,7 @@ public class WAMHitPoint : MonoBehaviour
                         
                         points += 10;
                         score.text = points.ToString();
+                        finalScore.text = "Score : "+points.ToString();
 
                     }
                 }

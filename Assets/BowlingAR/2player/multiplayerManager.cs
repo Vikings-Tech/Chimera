@@ -157,7 +157,7 @@ public class multiplayerManager : MonoBehaviour
 
             rb.gameObject.SetActive(false);
             Debug.Log("game over");
-            gameOver.SetActive(true);
+            gameOverdone();
 
         }
         foreach (GameObject ob in obs)
@@ -194,5 +194,51 @@ public class multiplayerManager : MonoBehaviour
     public void planeDestroyer()
     {
         groundPlane.SetActive(false);
+    }
+
+
+    public void menu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public Text winner;
+    public int scoreA;
+    public int scoreB;
+
+    public Text Ascore;
+    public Text Bscore;
+    public void gameOverdone()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            if(i%2 == 0)
+            {
+                scoreA += scores[i];
+            }
+            else
+            {
+                scoreB += scores[i];
+            }
+        }
+
+
+        if (scoreA > scoreB)
+        {
+            winner.text = "PLAYER A WINS!!!";
+
+            winner.color = new Color(0.945f, 0.1568f, 0.157f);
+        }
+        else
+        {
+            winner.text = "PLAYER B WINS!!!";
+
+            winner.color = new Color(0.3412f, 0.7412f,0.68235f) ;
+        }
+
+
+        Ascore.text = "A: " + scoreA.ToString();
+        Bscore.text = "B: " + scoreB.ToString();
+        LeanTween.scale(gameOver, Vector3.one, 1f);
     }
 }

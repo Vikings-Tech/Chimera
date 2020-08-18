@@ -7,7 +7,7 @@ public class TopBarHandler : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.profilePic)
+        if (GameManager.profilePic != null && ProfilePicImg != null)
         {
             ProfilePicImg.sprite = GameManager.profilePic;
         }

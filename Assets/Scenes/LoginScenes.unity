@@ -768,6 +768,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afff680f781f32343ba16056e84353d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  profile:
+    name: 
+    usrName: 
+    Bio: 
+    Achievements: 
+    profilePic: {fileID: 0}
 --- !u!114 &507750369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2088,7 +2094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1612162791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2135,6 +2141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PR: {fileID: 0}
+  SceneChanger: {fileID: 0}
 --- !u!114 &1612162794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,6 +3002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PR: {fileID: 0}
+  SceneChanger: {fileID: 507750370}
 --- !u!114 &1978441101
 MonoBehaviour:
   m_ObjectHideFlags: 0
