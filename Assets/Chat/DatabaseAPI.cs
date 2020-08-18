@@ -19,6 +19,7 @@ public class DatabaseAPI : MonoBehaviour
 
     public void PostMessage(Message message, Action callback, Action<AggregateException> fallback)
     {
+        //Debug.Log("Sender: " + message.sender + "\nMessage: " + message.text);
         string msgJson = StringSerializationAPI.Serialize(typeof(Message), message);
         reference.Child("messages").Push().SetRawJsonValueAsync(msgJson).ContinueWith(task =>
         {

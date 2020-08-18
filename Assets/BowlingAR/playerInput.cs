@@ -122,6 +122,21 @@ public class playerInput : MonoBehaviour
         panel.SetActive(false);
     }
 
+    public GameObject modeSelect;
+    public void singlePlayer()
+    {
+        modeSelect.SetActive(false);
+    }
+
+    public void twoPlayer()
+    {
+        SceneManager.LoadScene("bowlingMultiplayer");
+    }
+
+    public void arMode()
+    {
+        SceneManager.LoadScene("bowlingAR");
+    }
 
     public GameObject gameOver;
    public void resetScene()

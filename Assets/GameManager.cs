@@ -5,4 +5,14 @@ public class GameManager : MonoBehaviour
     public static string usrName;
     public static string id;
     public static Sprite profilePic;
+
+    private void Awake()
+    {
+        Debug.Log("Entered Game Manager Start");
+        if (string.IsNullOrEmpty(usrName))
+        {
+            usrName = "Anonymous";
+            Debug.Log("Assigned Username as Anonymous");
+        }        
+    }
 }

@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: 8067c70685f3f9f42a151e116f0a476f
+guid: 657ad9d9048b4c8eb351131596cc9bb8
 labels:
 - gvh
-- gvh_version-6.12.0
+- gvh_version-6.15.2
+- gvhp_exportpath-Firebase/Plugins/Firebase.Platform.dll.mdb
 timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1

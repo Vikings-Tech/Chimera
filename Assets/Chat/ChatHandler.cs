@@ -7,7 +7,7 @@ public class ChatHandler : MonoBehaviour
     public InputField messageInput;
     public DatabaseAPI database;
 
-    public GameObject messagePrefab;
+    public ChatPrefab messagePrefab;
     public Transform messagesContainer;
 
     private void Start()
@@ -17,7 +17,8 @@ public class ChatHandler : MonoBehaviour
 
     public void SendMessage()
     {
-        database.PostMessage(new Message(messageInput.text, (System.Empty(GameManager.usrName))), () => 
+        Debug.Log(GameManager.usrName);
+        database.PostMessage(new Message(messageInput.text, GameManager.usrName), () => 
         {
             Debug.Log("Message Was sent");
         },exception =>
@@ -31,6 +32,6 @@ public class ChatHandler : MonoBehaviour
     {
         var msg = Instantiate(messagePrefab, transform.position, Quaternion.identity);
         msg.transform.SetParent(messagesContainer, false);
-        msg.GetComponent<Text>().text = $"{message.sender}: {message.text}";  
+        msg.SetPrefab(message);
     }
 }

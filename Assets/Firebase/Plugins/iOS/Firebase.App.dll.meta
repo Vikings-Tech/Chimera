@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: f946597405b23ab43b6b4d6ce12c1c97
+guid: 5f3feda1a91343759b7eb58a29b492b7
 labels:
 - gvh
-- gvh_version-6.12.0
+- gvh_version-6.15.2
+- gvhp_exportpath-Firebase/Plugins/iOS/Firebase.App.dll
 timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1

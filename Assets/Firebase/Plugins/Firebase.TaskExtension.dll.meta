@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: 7b71faa55b404144598b828d70e53772
+guid: f5d4069c578548ba9f199b46d61bf06d
 labels:
 - gvh
-- gvh_version-6.12.0
+- gvh_version-6.15.2
+- gvhp_exportpath-Firebase/Plugins/Firebase.TaskExtension.dll
 timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1

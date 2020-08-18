@@ -12,6 +12,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /Assets/FacebookSDK/
+/Assets/Firebase/
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
