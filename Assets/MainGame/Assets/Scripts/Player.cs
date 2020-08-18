@@ -173,7 +173,10 @@ public class Player : MonoBehaviour
     }
     public void JumpUp()
     {
-        jumpRequest = true;
+        if (isGrounded)
+        {
+            jumpRequest = true;
+        }
 
     }
     public void BreakStuff()
