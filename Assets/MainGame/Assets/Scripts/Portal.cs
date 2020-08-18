@@ -34,4 +34,8 @@ public class Portal : MonoBehaviour
     {
         SceneManager.LoadScene("WAMARScene");
     }
+    public void GoHome()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
 }

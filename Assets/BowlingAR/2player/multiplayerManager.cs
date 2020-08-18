@@ -239,6 +239,7 @@ public class multiplayerManager : MonoBehaviour
 
         Ascore.text = "A: " + scoreA.ToString();
         Bscore.text = "B: " + scoreB.ToString();
+        gameOver.SetActive(true);
         LeanTween.scale(gameOver, Vector3.one, 1f);
     }
 }

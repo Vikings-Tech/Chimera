@@ -455,7 +455,7 @@ RectTransform:
   m_GameObject: {fileID: 101778822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1417533274}
   - {fileID: 873068365}
@@ -585,8 +585,8 @@ MonoBehaviour:
   playerBText: {fileID: 1263599487}
   score: {fileID: 318568332}
   panel: {fileID: 32590439}
-  gameOver: {fileID: 101778822}
-  groundPlane: {fileID: 1629952991}
+  gameOver: {fileID: 807822831}
+  groundPlane: {fileID: 807822831}
   winner: {fileID: 1648004776}
   scoreA: 0
   scoreB: 0
@@ -2422,7 +2422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &807822832
 RectTransform:
   m_ObjectHideFlags: 0
