@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public static string id;
     public static Sprite profilePic;
 
+    //public Sprite DefaultProfilePic;
+
     private void Awake()
     {
         //Debug.Log("Entered Game Manager Start");
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour
         {
             usrName = "Anonymous";
             //Debug.Log("Assigned Username as Anonymous");
-        }        
+        }
+        
+        //if(profilePic == null)
+        //{
+
+        //}
     }
 }

@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Models;
-using UnityEngine;
-
-public class RegistrationInfo
+﻿public class RegistrationInfo
 {
     public string UserName;
     public string Name;
@@ -16,6 +11,5 @@ public class RegistrationInfo
         Name = RegistrationHandler.Name;
         Email = RegistrationHandler.EmailID;
         Coins = RegistrationHandler.Coins;
-        
     }
 }

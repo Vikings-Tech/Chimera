@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿ 
 using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Auth;
@@ -46,6 +44,7 @@ public class RegistrationHandler : MonoBehaviour
             {
                 Firebase.FirebaseException e =
                     task.Exception.Flatten().InnerExceptions[0] as Firebase.FirebaseException;
+                Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
                 GetErrorMessage((AuthError)e.ErrorCode);
                 return;
             }
@@ -53,6 +52,7 @@ public class RegistrationHandler : MonoBehaviour
             {
                 Firebase.FirebaseException e =
                     task.Exception.Flatten().InnerExceptions[0] as Firebase.FirebaseException;
+                Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
                 GetErrorMessage((AuthError)e.ErrorCode);
                 return;
             }

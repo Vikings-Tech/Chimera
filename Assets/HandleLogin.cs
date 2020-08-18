@@ -16,7 +16,7 @@ public class HandleLogin : MonoBehaviour
 
     public void GuestLogin()
     {
-
+        
     }
 
     public void SetUserProfile(string name, string email, string usrName, Sprite profilePic)

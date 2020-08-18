@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Portal : MonoBehaviour
 {
@@ -28,7 +30,8 @@ public class Portal : MonoBehaviour
     {
 
     }
-    public void OnEnterPortal(){
-
+    public void OnEnterPortal()
+    {
+        SceneManager.LoadScene("WAMARScene");
     }
 }

@@ -30,10 +30,12 @@ public class LoginController : MonoBehaviour
 
             if (!task.IsCompleted) return;
             LoggedIn = true;
-                
-                
+            FirebaseUser newUser = task.Result;
+            UserMetadata data = newUser.Metadata;
+            //GameManager.usrName = newUser.ToString();
+            Debug.Log(data);    
         }));
-        SceneManager.LoadScene("MenuScene");
+        //SceneManager.LoadScene("MenuScene");
     }
     void GetErrorMessage(AuthError errorCode)
     {

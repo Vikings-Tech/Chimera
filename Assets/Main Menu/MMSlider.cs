@@ -11,10 +11,14 @@ public class MMSlider : MonoBehaviour, IDragHandler,IEndDragHandler
 
     public int panelLeft;
     public int panelRight;
+
+    public GameObject leftPanel;
+    public GameObject rightPanel;
     // Start is called before the first frame update
     void Start()
     {
         panelPosition = transform.position;
+
     }
 
  

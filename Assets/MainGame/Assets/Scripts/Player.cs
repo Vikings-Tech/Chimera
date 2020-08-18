@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -67,7 +68,8 @@ public class Player : MonoBehaviour
         }
 
     }
-    public void PlayPause(){
+    public void PlayPause()
+    {
         world.inUI = !world.inUI;
     }
 
@@ -133,14 +135,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        horizontal = Input.GetAxis("Horizontal");
-        // horizontal = joystick.Horizontal;
-        vertical = Input.GetAxis("Vertical");
-        // vertical = joystick.Vertical;
-        mouseHorizontal = Input.GetAxis("Mouse X");
-        mouseVertical = Input.GetAxis("Mouse Y");
-        // mouseVertical = fixedTouchField.TouchDist.y * 0.1f;
-        // mouseHorizontal = fixedTouchField.TouchDist.x * 0.1f;
+        // horizontal = Input.GetAxis("Horizontal");
+        horizontal = joystick.Horizontal;
+        // vertical = Input.GetAxis("Vertical");
+        vertical = joystick.Vertical;
+        // mouseHorizontal = Input.GetAxis("Mouse X");
+        // mouseVertical = Input.GetAxis("Mouse Y");
+        mouseVertical = fixedTouchField.TouchDist.y * 0.1f;
+        mouseHorizontal = fixedTouchField.TouchDist.x * 0.1f;
 
 
         // if (Input.GetButtonDown("Sprint"))
